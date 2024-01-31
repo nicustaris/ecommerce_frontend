@@ -19,11 +19,11 @@ const Routing = () => {
       <Route path="/product/:productId" element={<SingleProductPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
-      <Route element={<ProtectedRoute />}>
-        <Route path="/myorders" element={<MyOrder />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/logout" element={<Logout />} />
-      </Route>
+      {/* <Route element={<ProtectedRoute />}> */}
+      <Route path="/myorders" element={<MyOrder />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/logout" element={<Logout />} />
+      {/* </Route> */}
     </Routes>
   );
 };
