@@ -1,0 +1,146 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #fff;
+}
+
+.navbar_heading {
+    font-size: 32px;
+    margin-right: 20px;
+}
+
+.navbar_heading img {
+    width: 60px;
+    /* height: 40px; */
+    object-fit: contain;
+}
+
+.navbar_form {
+    position: relative;
+    width: 450px;
+    height: 35px;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.navbar_search {
+    flex: 1;
+    height: 100%;
+    padding: 0 7px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    color: #424242;
+}
+
+.search_button {
+    font-size: 20px;
+    border: none;
+    height: 100%;
+    padding: 10px 10px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #6699CC;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search_buttonIcon {
+    border: none;
+    height: 100%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+.searchIcon {
+    width: 85%;
+    height: 85%;
+    margin-top: 2px;
+    background-color: transparent;
+}
+
+.search_result {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style: none;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #f7f7f7;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.search_suggestion_link {
+    display: flex;
+}
+
+.search_suggestion_link>a {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.search_suggestion_link.active {
+    background-color: #f7f7f7;
+    color: #424242;
+    transition: .1s ease-in-out;
+}
+
+.search_suggestion_link:hover {
+    background-color: #f7f7f7;
+    color: #424242;
+    transition: 0.1s ease-in-out;
+
+}
+
+.navbar_links {
+    font-size: 20px;
+}
+
+.navbar_links>a {
+    margin: 15px;
+}
+
+.navbar_links>a.active {
+    font-weight: 600;
+}
+
+.cart_counts {
+    position: relative;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.cart_counts_number {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    top: 9px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.sidebar_link {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.15s ease-in-out;
+}
+
+.sidebar_link:hover {
+    background-color: #f8f8f8;
+}

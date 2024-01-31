@@ -1,0 +1,40 @@
+.products_list_section {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.products_list_header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.products_showing_results {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.products_list_header>h2 {
+    font-size: 26px;
+}
+
+.products_sorting {
+    max-width: 200px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.products_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

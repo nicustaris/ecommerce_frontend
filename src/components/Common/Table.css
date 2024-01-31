@@ -1,0 +1,24 @@
+.common_table {
+    width: 100%;
+    margin-bottom: 16px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.common_table thead th {
+    height: 40px;
+    background-color: #6699CC;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.common_table tbody tr {
+    height: 50px;
+    text-align: center;
+}
+
+.common_table tbody tr:nth-child(even) {
+    background-color: #fdfdfd;
+}

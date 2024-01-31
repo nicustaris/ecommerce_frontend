@@ -1,0 +1,9 @@
+.products_sidebar {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.products_sidebar>h4 {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
