@@ -7,3 +7,21 @@
     font-size: 19px;
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 556px) {
+    .category_links {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .category_links a {
+        background-color: #e6e6e6;
+        margin: 5px;
+    }
+
+
+    .products_sidebar h4 {
+        justify-content: center;
+        text-align: center;
+    }
+}
