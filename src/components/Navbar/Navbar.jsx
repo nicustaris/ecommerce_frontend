@@ -15,6 +15,7 @@ const Navbar = () => {
   const [search, setsearch] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [selectedItem, setSelectedItem] = useState(-1);
+  const [showMenu, setShowMenu] = useState(false);
 
   const { cart } = useContext(CartContext);
   const user = useContext(UserContext);
@@ -27,6 +28,10 @@ const Navbar = () => {
       navigate(`/products?search=${search.trim()}`);
     }
     setSuggestions([]);
+  };
+
+  const handleToggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   useEffect(() => {
@@ -106,7 +111,44 @@ const Navbar = () => {
           )}
         </form>
       </div>
-      <div className="align_center navbar_links">
+      <div onClick={handleToggleMenu} className="burger_menu">
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+
+      {showMenu && (
+        <div className="modal">
+          <div className="modal_content">
+            <button className="modal_close" onClick={handleToggleMenu}>
+              X
+            </button>
+            <Navlinks title="HOME" link="/" />
+            <Navlinks title="PRODUCTS" link="/products" />
+            {!user && (
+              <>
+                <Navlinks title="LOGIN" link="/login" />
+                <Navlinks title="SIGNUP" link="/signup" />
+              </>
+            )}
+            {user && (
+              <>
+                <Navlinks title="MY ORDERS" link="/myorders" />
+                <Navlinks title="LOGOUT" link="/logout" />
+                <NavLink to="/cart" className="align_center">
+                  <div className="align_center cart_counts">
+                    <img src={cartIcon} />
+                    <p className="cart_counts_number">{cart.length}</p>
+                  </div>
+                </NavLink>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+      <div
+        className={`align_center navbar_links ${showMenu ? "show_menu" : ""}`}
+      >
         <Navlinks title="HOME" link="/" />
         <Navlinks title="PRODUCTS" link="/products" />
         {!user && (
