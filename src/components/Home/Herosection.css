@@ -2,11 +2,35 @@
 .hero_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 550px;
+    height: auto;
     padding: 0 60px;
     background-color: #6699CC;
     color: #f1f1f1;
+}
 
+@media screen and (max-width: 990px) {
+    .hero_section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_section img {
+        width: 350px;
+        padding: 15px;
+    }
+
+    .hero_title {
+        /* margin-top: 35px; */
+    }
+}
+
+.hero_section img {
+    max-width: 100%;
+    height: auto;
 }
 
 .hero_section>div {

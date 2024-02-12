@@ -26,6 +26,13 @@
     padding: 3px;
 }
 
+@media screen and (max-width: 990px) {
+    .navbar_form {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
 .navbar_search {
     flex: 1;
     height: 100%;
